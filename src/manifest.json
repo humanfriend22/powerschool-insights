@@ -1,0 +1,17 @@
+{
+    "name": "Powerschool Insights",
+    "description": "Recieve insights on your grades in Powerschool",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions": [
+        "tabs",
+        "storage",
+        "activeTab",
+        "scripting",
+        "webNavigation"
+    ],
+    "action": {
+        "default_title": "Powerschool Insights",
+        "default_popup": "index.html"
+    }
+}

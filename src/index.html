@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup</title>
+    <link rel="stylesheet" href="pico.min.css">
+    <style>
+        main {
+            padding-bottom: 1rem !important;
+        }
+
+        section {
+            margin-bottom: 0;
+        }
+
+        article {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            margin-top: 0px !important;
+            margin-bottom: 0.5rem;
+        }
+
+        hr.rounded {
+            border-top: 2px solid lightgray;
+            border-radius: 5px;
+        }
+
+        #switch {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        #assignments>article {
+            background-color: #3949ab;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container" style="min-width: 18rem;">
+        <section style="min-width: 30rem;  aspect-ratio: 1; display: none">
+            <article style="font-size: 1rem" id="metadata">
+                <span></span>
+                <span style="float: right"></span>
+            </article>
+
+            <article style="background-color: inherit;">
+                <div style="display: flex;">
+                    <div>
+                        <label for="target">Target</label>
+                        <select id="target" required style="height: 3rem; width: 5rem">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4" selected>4</option>
+                        </select>
+                    </div>
+
+                    <p id="distance"
+                        style="font-weight: 400; width: fit-content; font-size: 1rem; margin-left: 3rem; margin-top: 1rem; display: inline;">
+                    </p>
+                </div>
+
+                <hr class="rounded">
+
+                <span style="font-size: 1rem; margin-top: 30px !important; font-weight: 500;">Try
+                    improving the
+                    following:</span>
+
+                <label for="include-llls" style="font-size: 0.9rem; margin-top: 10px">
+                    <input type="checkbox" id="include-llls" name="switch" role="switch">
+                    Include LLLs
+                </label>
+
+                <div id="assignments" style="overflow: auto; margin-top: 20px; max-height: 14rem"></div>
+            </article>
+        </section>
+
+        <section style="display: none; text-align: center; padding-top: 2rem">
+            <h1 style="margin-bottom: 10px">Welcome!</h1>
+            <h5 style="max-width: 75%;margin-left: auto; margin-right: auto">
+                Navigate to a class in Powerschool to view insights
+            </h5>
+        </section>
+
+    </main>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
